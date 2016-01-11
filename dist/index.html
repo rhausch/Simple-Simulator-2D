@@ -1,41 +1,55 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Simple Game Board Test v1</p>
+<!-- Add your site or application content here -->
+<p>Simple Game Board Test v1</p>
 
-        <div id="statsContainer">FPS: <div id="FPSvalue">0</div></div>
-        <div id="controls">
-            <input type="button" value="Start" id="Start">
-            <input type="button" value="Step" id="Step">
-            <input type="button" value="Generate Random Cells" id="Rand">
-        </div>
-        <div id="BoardContainer" style="padding: 10px">
-            <canvas id="GameBoard" width="2000" height="2000"></canvas>
-        </div>
+<div id="statsContainer">FPS: <span id="FPSvalue">0</span></div>
+<div id="controls">
+    <div>
+        <label>Cell Size =
+        <select id="cellSize">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="8" selected>8</option>
+            <option value="16">16</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+        </select>
+            </label>
+    </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+    <input type="button" value="Start" id="Start">
+    <input type="button" value="Step" id="Step">
+    <input type="button" value="Generate Random Cells" id="Rand">
+</div>
+<div id="BoardContainer" style="padding: 10px; width: 100%; height: 100%;">
+    <canvas id="GameBoard" width="1500" height="1000"></canvas>
+</div>
 
-    </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
 </html>
